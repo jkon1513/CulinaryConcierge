@@ -19,6 +19,17 @@ function dispatch(intent_request) {
     }
 }
 
+function getSuggestions(intent_request) {
+    const context = intent_request.invocationSource;
+    const session_attr = intent_request.sessionAttributes;
+    const slots = intent_request.currentIntent.slots;
+    
+    if(context === "DialogCodeHook") {
+        return delegate(session_attr, slots);
+    }
+
+    return close("will be returning some suggestions soon");
+}
 /*================================
     Response Builders
 =================================*/
@@ -50,5 +61,3 @@ function close(response_mssg){
     
     return resp;
 }
-
-

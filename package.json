@@ -1,0 +1,48 @@
+{
+  "name": "culinaryconcierge",
+  "version": "1.0.0",
+  "description": "Concierge chat agent for finding suggestions for places to eat based on budget and mood",
+  "main": "frontend/chat.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "webpack --config frontend/webpack.config.js --debug",
+    "clean-front": "rm -rf frontend/build",
+    "start": "webpack-dev-server --config frontend/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkon1513/CulinaryConcierge.git"
+  },
+  "keywords": [
+    "aws",
+    "chatbot",
+    "dining",
+    "food"
+  ],
+  "author": "Jason Konikow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkon1513/CulinaryConcierge/issues"
+  },
+  "homepage": "https://github.com/jkon1513/CulinaryConcierge#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
