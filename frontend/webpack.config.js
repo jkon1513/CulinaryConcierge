@@ -9,7 +9,8 @@ module.exports = {
     mode:"development",
     devServer: {
         contentBase: [path.resolve(__dirname, "public"),path.resolve(__dirname,"build")],
-        publicPath: "/build/"
+        publicPath: "/build/",
+        open: true
     },
     module: {
         rules: [

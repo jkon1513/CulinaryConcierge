@@ -1,8 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import CulinaryConcierge from "../components/CulinaryConcierge";
+import App from "../components/App";
 
-ReactDOM.render(<CulinaryConcierge/>, document.getElementById("root"));
-
-
-
+ReactDOM.render(<App/>, document.getElementById("root"));
