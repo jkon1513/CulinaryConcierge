@@ -28,6 +28,9 @@
   },
   "homepage": "https://github.com/jkon1513/CulinaryConcierge#readme",
   "dependencies": {
+    "@material-ui/core": "^4.5.0",
+    "@material-ui/icons": "^4.4.3",
+    "@material-ui/styles": "^4.5.0",
     "node-fetch": "^2.6.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
