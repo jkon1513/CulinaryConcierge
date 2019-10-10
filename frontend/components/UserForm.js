@@ -13,6 +13,9 @@ const styles={
         flexDirection: "column",
         JustifyContent: "center",
         alignItems: "center"
+    },
+    button: {
+        margin:"1rem 0"
     }
 }
 
@@ -27,11 +30,11 @@ function UserForm(props) {
         resetEmail();
         resetPassWord();
     }
-    const {UserForm} = props.classes;
+    const {UserForm, button} = props.classes;
     const {formName} = props;
     return(
         <form onSubmit={handleSubmit} className={UserForm}>
-            <h1>{formName}</h1>
+            <h2>{formName}</h2>
             <TextField
                 id="email"
                 label="email:"
@@ -60,7 +63,7 @@ function UserForm(props) {
                 margin="normal"
                 variant="filled"
             />
-            <Button variant="contained" type="submit">Submit</Button>
+            <Button variant="contained" type="submit" className={button}>Submit</Button>
         </form>
 
     )

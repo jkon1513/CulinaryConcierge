@@ -1,9 +1,9 @@
 import React from "react";
-import UserForm from "./UserForm";
+import Login from "./Login";
 
 function App() {
     return (
-        <UserForm/>
+        <Login/>
     )
 }
 
