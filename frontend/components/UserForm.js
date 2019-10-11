@@ -5,19 +5,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Button from "@material-ui/core/Button";
 import useControlledInput from "./hooks/useControlledForm";
-
-const styles={
-    UserForm: {
-        width:"100%",
-        display: "flex",
-        flexDirection: "column",
-        JustifyContent: "center",
-        alignItems: "center"
-    },
-    button: {
-        margin:"1rem 0"
-    }
-}
+import styles from "./styles/UserFormStyles";
 
 function UserForm(props) {
     const [email, setEmail, resetEmail] = useControlledInput("");
@@ -30,10 +18,10 @@ function UserForm(props) {
         resetEmail();
         resetPassWord();
     }
-    const {UserForm, button} = props.classes;
-    const {formName} = props;
+   
+    const {formName, classes} = props;
     return(
-        <form onSubmit={handleSubmit} className={UserForm}>
+        <form onSubmit={handleSubmit} className={classes.UserForm}>
             <h2>{formName}</h2>
             <TextField
                 id="email"
@@ -63,9 +51,8 @@ function UserForm(props) {
                 margin="normal"
                 variant="filled"
             />
-            <Button variant="contained" type="submit" className={button}>Submit</Button>
+            <Button variant="contained" type="submit" className={classes.button}>Submit</Button>
         </form>
-
     )
 }
 export default withStyles(styles)(UserForm);

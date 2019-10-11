@@ -10,7 +10,8 @@ module.exports = {
     devServer: {
         contentBase: [path.resolve(__dirname, "public"),path.resolve(__dirname,"build")],
         publicPath: "/build/",
-        open: true
+        open: true,
+        historyApiFallback: true // this is only ok while in development
     },
     module: {
         rules: [

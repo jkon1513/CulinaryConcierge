@@ -1,9 +1,13 @@
 import React from "react";
-import Login from "./Login";
+import Authentication from "./Authentication";
+import {Switch, Route} from "react-router-dom";
 
 function App() {
     return (
-        <Login/>
+        <Switch>
+            <Route exact path="/" render={(routerParams) => <Authentication hasAccount={true}/>} />
+            <Route exact path="/create-account" render={(routerParams) => <Authentication hasAccount={false}/>} />
+        </Switch>
     )
 }
 
