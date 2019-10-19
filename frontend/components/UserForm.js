@@ -13,10 +13,12 @@ function UserForm(props) {
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        //put signing/login here
-        alert(`username: ${email}, password: ${passWord}`);
+        //put signing/login here, for now well pretend we authenticated
         resetEmail();
         resetPassWord();
+        console.log("about to push")
+        console.log(props.history)
+        props.history.push("/suggestions");
     }
    
     const {formName, classes} = props;

@@ -8,8 +8,9 @@
   },
   "scripts": {
     "build": "webpack --config frontend/webpack.config.js --debug",
-    "clean-front": "rm -rf frontend/build",
-    "start": "webpack-dev-server --config frontend/webpack.config.js"
+    "clean:front": "rm -rf frontend/build",
+    "start": "webpack-dev-server --config frontend/webpack.config.js",
+    "json:server": "json-server --watch frontend/json/response.json"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,7 @@
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "html-loader": "^0.5.5",
+    "json-server": "^0.15.1",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",

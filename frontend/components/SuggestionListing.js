@@ -4,12 +4,19 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import styles from "./styles/SuggestionListingStyles";
 
 function SuggestionListing(props) {
-    const {classes, deleteListing} = props;
+    const {classes, deleteListing, openListing} = props;
     const {name, rating, avgPrice, imgUrl, id} = props.summaryData;
+    
+    const handleClick = (evt) => openListing(id);
+    
+    const handleDelete = (evt) => {
+        evt.stopPropagation();
+        deleteListing(id);
+    }
     return (
-        <div className={classes.SuggestionListing}>
+        <div className={classes.SuggestionListing} onClick={handleClick}>
             <div className={classes.container}>
-                <DeleteIcon className={classes.delete} onClick={() => deleteListing(id)}/>
+                <DeleteIcon className={classes.delete} onClick={handleDelete}/>
                 <h2>{name}</h2>
                 <div className={classes.image} style={{background: `url(${imgUrl}) center center/cover`}}></div>
                 <div className={classes.info}>

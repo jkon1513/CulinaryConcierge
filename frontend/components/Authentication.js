@@ -18,6 +18,7 @@ function Authentication(props) {
                 </div>
                 <UserForm 
                     formName={hasAccount ? "Login" : "Sign Up"}
+                    history={props.history}
                 />
                 <p>{hasAccount ? loginMessage.text : signupMessage.text}</p>
                 <Link to={hasAccount ? "/create-account" : "/"}>
