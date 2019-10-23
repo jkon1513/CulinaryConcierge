@@ -1,6 +1,7 @@
 export default {
     SuggestionListing: {
-        backgroundColor: "#eee",
+        height: "43%",
+        backgroundColor: "#ecfcff",
         borderRadius: "5px",
         padding: "1rem",
         border: "1px solid #000"
@@ -13,7 +14,8 @@ export default {
         justifyContent: "flex-start",
         alignItems: "center",
         "& h2": {
-            marginBottom: ".5rem"
+            marginBottom: ".5rem",
+            color: "#3e64ff"
         },
         "&:hover": {
             "& svg": {
@@ -22,8 +24,22 @@ export default {
         }
     },
     image: {
+        position: "relative",
         height: "10rem",
         width: "100%",
+        backgroundImage: props => `url(${props.summaryData.imgUrl})`,
+        "&:after" : {
+            content: "\"\"",
+            position: "absolute",
+            top: "0",
+            left: "0",
+            height: "100%",
+            width: "100%",
+            backgroundImage: "linear-gradient(#000, #000)",
+            opacity: "0.4",
+            zIndex: "1"
+        }
+
     },
     info: {
         display: "flex",

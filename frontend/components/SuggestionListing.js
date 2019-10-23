@@ -18,7 +18,7 @@ function SuggestionListing(props) {
             <div className={classes.container}>
                 <DeleteIcon className={classes.delete} onClick={handleDelete}/>
                 <h2>{name}</h2>
-                <div className={classes.image} style={{background: `url(${imgUrl}) center center/cover`}}></div>
+                <div className={classes.image}></div>
                 <div className={classes.info}>
                     <span>Avg cost: ${avgPrice}</span>
                     <span>Rating: {rating.toFixed(1)}</span>
